@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Program</title>
+  </head>
+  <body>
+    <div id="oldVal"></div>
+    <div id="newVal"></div>
+    <div id="flagVal"></div>
+    <div id="strVal"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      var num, str, flag, obj, arr;
+      arr = new Array();
+      arr[0] = "Pune";
+      arr[1] = "Mumbai";
+      arr[2] = "Hyderabad";
+      arr[3] = "Delhi";
+      arr[4] = "Chennai";
+      arr[5] = "Punjab";
+
+      flag = false;
+      str = "Pune";
+
+      debugger;
+
+      document.getElementById("oldVal").innerHTML = "Old Array: " + arr;
+
+      var newArr = new Array(arr.splice(0, 2));
+
+      document.getElementById("newVal").innerHTML = "New Array: " + newArr;
+
+      flag = true;
+
+      document.getElementById("flagVal").innerHTML = "Boolean Value: " + flag;
+
+      document.getElementById("strVal").innerHTML =
+        "String Value: " + str + " Satar Road";
+    </script>
+  </body>
+</html>

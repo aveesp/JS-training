@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="oldVal"></div>
+		<div id="newVal"></div>
+		<div id="flagVal"></div>
+		<div id="strVal"></div>
+		<script>
+			class student{
+				constructor(rollNo, name, address){
+					this.rollNo = rollNo;
+					this.name = name;
+					this.address = address;
+				}
+			}
+			var globalObj = new Array();
+			
+			var student1 = new student(111, 'Abdullah', 'katraj, pune');
+			var student2 = new student(112, 'Sadik', 'Deccan, pune');
+			var student3 = new student(113, 'Khalid', 'Kondhwa, pune');
+			var student4 = new student(114, 'Vasim', 'Kondhwa, pune');
+			var student5 = new student(115, 'Nadeem', 'Camp, pune');
+			
+			//static method that have no relation with any 'student' class object instance.
+			student.showName = function(){
+				alert(this.name);
+			}
+			
+			//public method
+			student.prototype.showDetails = function(){
+				var obj = {};
+				obj.name = this.name;
+				obj.rollNo = this.rollNo;
+				obj.address = this.address;
+				globalObj.push(obj)
+				console.log(globalObj);
+			}
+			
+			student1.showDetails();
+			student2.showDetails();
+			student3.showDetails();
+			student4.showDetails();
+			student5.showDetails();
+		</script>
+	</body>
+</html>

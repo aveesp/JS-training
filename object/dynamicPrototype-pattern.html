@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factory Pattern Example</title>
+    </head>
+    <body>
+        <script>
+            //Dynamic Prototype Pattern 
+            var dynamicPeopleProto = function(name, age, address){
+                this.name = name;
+                this.age =  age;
+                this.address = address;
+
+                if(typeof this.print !== 'function'){
+                    dynamicPeopleProto.prototype.print = function(){
+                        var div = document.createElement('div');
+                        var t = document.createTextNode(this.name + ", " + this.age + ", " + this.address);
+                        div.appendChild(t);
+                        div.style.fontFamily = 'trebuchet ms';
+                        div.style.fontSize = 20;
+                        div.style.marginBottom = '8px';
+                        document.body.style.margin = 0;
+                        document.body.style.padding = '20px';
+                        document.body.appendChild(div);
+                    }
+                }
+            };
+
+            var person1 = new dynamicPeopleProto('avees', 29, 'katraj, Pune');
+            var person2 = new dynamicPeopleProto('abdul', 27, 'kondhwa, Pune');
+
+            person1.print();
+            person2.print();
+
+        </script>
+    </body>
+</html>

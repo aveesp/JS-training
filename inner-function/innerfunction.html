@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<button type="button" onclick="myFunction()">Click</button>
+		<div id="para"></div>
+		<script>
+			var cnt = 0;
+			//function add(){
+			//	return cnt++;
+			//}
+			
+			function myFunction(){
+				document.getElementById("para").innerHTML = add();
+			}
+
+			var add = (function(){
+				var counter = 0;  
+				return function(){
+					return counter +=1;
+				}
+			})();
+			
+		</script>
+	</body>
+</html>

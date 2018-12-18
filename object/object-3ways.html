@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="oldVal"></div>
+		<div id="newVal"></div>
+		<div id="flagVal"></div>
+		<div id="strVal"></div>
+		<script>
+			var a = {id: 12231, name: 'Avees'};
+			console.log(a);
+			
+			var b = new Object();
+			b.id = 12312;
+			b.name = 'Avees';
+			console.log(b);
+			
+			function obj(){
+				this.id = 12221;
+				this.name= 'Avees';
+				this.post = "nothing";
+			}
+			var myObj = new obj();
+			
+			console.log(myObj);
+		</script>
+	</body>
+</html>

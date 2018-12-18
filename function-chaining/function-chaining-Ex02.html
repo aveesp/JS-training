@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<script>
+			var obj = function(){
+				var i = 0;
+				
+				var add = function(j){
+					i += j;
+					return this;
+				}
+				
+				var subs = function(j){
+					i -= j;
+					return this;
+				}
+				
+				var print = function(){
+					console.log(i);
+				}
+				
+				return {add:add, subs:subs, print:print};
+			}
+			
+			var x = new obj();
+			
+			x.add(4).subs(2).print();
+			
+		</script>
+	</body>
+</html>

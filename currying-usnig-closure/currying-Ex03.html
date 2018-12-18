@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Currying Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<script>
+			var sayWhat = function(a){
+				return function(b){
+					return  function(c){
+						console.log("Saying " + a + " To " + b + " Using " + c);
+					}
+				}
+			}
+			
+			sayWhat("Hello")('Friends')('Javascript');
+			
+			var sayHi = sayWhat('Hi');
+			var sayHiToMe = sayHi('Me');
+			var syaHiToMeUsing = sayHiToMe('Nothing')
+		</script>
+	</body>
+</html>

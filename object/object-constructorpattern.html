@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Object creation - Constructor Pattern Program</title>
+	</head>
+	<body>
+		<script>
+			//Constructor pattern - Object creation.
+			var person = function(name, age, loc){
+				this.name = name;
+				this.age = age;
+				this.loc = loc;
+				
+				this.print = function(){
+					console.log(this.name + ", " + this.age + ", " + this.loc);
+				}
+			}
+			
+			var p1 = new person('avees', 29, 'Katraj');
+			var p2 = new person('sartaj', 25, 'Kondhwa');
+			
+			p1.print()
+			p2.print()
+		</script>
+	</body>
+</html>

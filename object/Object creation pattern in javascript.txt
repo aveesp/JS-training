@@ -1,0 +1,5 @@
+object  creation pattern in javascript
+- Constructor Pattern
+- Factory pattern
+- Prototype pattern
+- Dynamic Prototype Pattern

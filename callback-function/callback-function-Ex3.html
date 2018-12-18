@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<div id="msg2"></div>
+		<div id="msg3"></div>
+		<script>
+			let myArrObj = [
+				{
+					num: 5,
+					str: 'apple'
+				},
+				{
+					num: 7,
+					str: 'cabbage'
+				},
+				{
+					num: 1,
+					str: 'banana'
+				}
+			]
+			
+			myArrObj.sort(function(val1, val2){
+				if(val1.str < val2.str){
+					return -1 //false
+				}
+				else{
+					return 1; //true
+				}
+			});
+			//function wich pass to another function as an argument.
+			console.log(myArrObj);
+		</script>
+	</body>
+</html>

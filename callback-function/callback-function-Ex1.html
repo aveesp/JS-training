@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<div id="msg2"></div>
+		<div id="msg3"></div>
+		<script>
+			let x = function(){
+				console.log('i am called from inside a function');
+			}
+			
+			let y = function(s){
+				console.log('do somthing');
+				s();
+			}
+			
+			//callback function
+			y(x);
+			
+			
+		</script>
+	</body>
+</html>

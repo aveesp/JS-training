@@ -1,0 +1,32 @@
+
+Callback Functions (Higher Order Functions):
+	-	function are actually first class object.
+	-	just like you can pass function object as an arguments you can pass other function in to function as arguments. execute at some point.
+	-	you can pass function as arguments.
+	
+
+Closure :
+
+	- 	closures are nothing but function which preserve data.
+	-	in Javascript variables are defined outside function are autmatically available inside because javascript uses something called lexical scoping.
+	-	Variables which are defined outside can available inside.
+	-	Variable defined inside are not avilable outside.
+	-	it keeps the variable to needed to execute.
+	-	it preserve the variable inside the function as a property.
+	
+	
+Currying: 
+	-	This is devloped by Hascal curry, Hansen curry.
+	-	Closures to build currying.
+	-	it is used to give color element do somoe manupulation.
+	
+innerfunction:
+	-	innerfunction is a function defined within another function.
+	function outerFunc(outerPara){
+		function innerFunc(innerPara){
+			return innerPara * 10;
+		}
+	}
+	
+Function Chaining:
+	-	

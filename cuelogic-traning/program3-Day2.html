@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="oldVal"></div>
+		<div id="newVal"></div>
+		<div id="flagVal"></div>
+		<div id="strVal"></div>
+		<script>
+				var i;
+				function add(...a){
+					var sum = 0;
+					for(i=0; i<a.length; i++){
+						sum = sum + a[i];
+					}
+					return console.log(sum);
+				}
+				function sub(...args){
+					var sub, counter = 0;
+					if(args.length < 1)
+					{
+						sub = args[0];
+						return alert("Provide Atleast 2 Intergers Value");
+					}
+					else{
+						for(i=0; i<(args.length - 1); i++){
+							
+							if(isNaN(args[i])){
+								sub = args[i] - args[i+1];
+								console.log(sub);
+							}
+							else{
+								return alert("Provide Intergers Value" + args[i]);
+							}
+						}
+					}
+				}
+				add(10, 20);
+				//sub('10', 5 , 3);
+		</script>
+	</body>
+</html>

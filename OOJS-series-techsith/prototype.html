@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //normal function inside the constructor
+         let Car = function(color){
+             this.color = color;
+             this.getColor = function(){
+                 return this.color;
+             }
+         }
+
+         let blueCar = new Car('blue');
+         console.log(blueCar);
+
+         //prototype function 
+         let bCar = function(color){
+             this.color = color;
+         }
+
+         bCar.prototype.getColor = function(){
+             return this.color;
+         }
+         let redCar = new bCar('red');
+
+         console.log(redCar.toString());
+
+    </script>
+</body>
+</html>

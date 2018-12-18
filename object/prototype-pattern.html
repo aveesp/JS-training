@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factory Pattern Example</title>
+    </head>
+    <body>
+        <script>
+            //Prototype Pattern 
+            var peopleProto = function(){
+            }
+            peopleProto.prototype.age = 0;
+            peopleProto.prototype.name = 'no name';
+            peopleProto.prototype.city = 'no city';
+
+            peopleProto.prototype.print = function(){
+                    var div = document.createElement('div');
+                    var t = document.createTextNode(this.age + ", " + this.name + ", " + this.city);
+                div.appendChild(t);
+                document.body.appendChild(div);
+            };
+
+            var person1 = new peopleProto();
+            person1.age = 29;
+            person1.name = 'avees';
+            person1.city = 'pune';
+            person1.print();
+
+            console.log('name' in person1);
+            console.log(person1.hasOwnProperty('name'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car1{
+            constructor(color){
+                this.color = color;
+            }
+
+            drive(){
+                console.log("Driving");
+            }
+        }
+
+        let redCar = new Car1('red');
+
+        console.log(redCar);
+
+        let Car = (function(){
+            let _car = function(color){
+                this.color = color;
+            }
+            _car.prototype.dirve = function(){
+                console.log("Driving");
+            }
+
+            return _car;
+        })();
+
+        console.dir(Car);
+    </script>
+</body>
+</html>

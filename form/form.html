@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Object creation - Constructor Pattern Program</title>
+		<style>
+			html, body{margin:0;padding:0;font-family:'calibri'}
+			h1{margin:0;}
+			.header{background:#eee;color:#000;width:100%; height: 110px;text-align:center;border-bottom:solid 2px #999;}
+			form{padding: 10px;margin: 10px;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1 id="heading">Learning Javascript</h1>
+			<p>With Brad Traversy</p>
+		</div>
+		<form method="post" action="something.php" name="myForm" onsubmit="validateForm()">
+			<div> 
+				<label>First Name</label>
+				<input type="text" name="firstName" id="firstName">
+			</div>
+			<br/>
+			<div>
+				<label>Last Name</label>
+				<input type="text" name="lastName" id="lastName ">
+			</div>
+			<br/>
+			<input type="submit" value="submit" />
+		</form>
+		<script>
+			function validateForm(){
+				var firstName = document.forms['myForm']['firstName'].value;
+				if(firstName == null || firstName == ""){
+					document.getElementById('firstName').style.border = 'solid 1px red';
+					alert('First Name is Required');
+					return true;
+				}
+				if(firstName.length < 3){
+					alert('First name must be at least 3 chars');					
+					return true;
+				}
+			}
+			
+		</script>
+	</body>
+</html>

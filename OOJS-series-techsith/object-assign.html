@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let toyota = {
+            drive(){
+                return 'driving toyota';
+            },
+            break(){
+                return 'breaking toyota';
+            }
+        };
+
+        let camry = {
+            drive(){
+                return 'driving camry';
+            }
+        };
+
+        Object.assign(camry, toyota);
+
+        //to colne the object
+        let copyToyota = Object.assign({}, toyota);
+        console.dir(copyToyota);
+
+        Object.assign(toyota, {
+            wifi(){
+                return 'using wifi';
+            }, color: "red"
+        })
+
+        console.dir(toyota);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        //regurlar function which get some param and set it and return the result
+        let add = function(n1,n2){
+            return n1 + n2
+        }
+        
+        let sum = add(1,3);
+
+        console.log(sum);
+
+
+        let Car = function(color){
+            if(!new.target) throw 'Car() must be callled with new';
+            this.color = color;
+        }
+
+        //created new object
+        let redCar = new Car('red');
+
+        console.log(redCar.color);
+
+        let brandCar = function(_color){
+            this.setColor = function(color){
+                _color = color;
+            }
+            this.getColor = function(color){
+                return _color;
+            }
+        };
+
+        let blueCar = new brandCar('blue');
+
+        console.log(blueCar.getColor());
+    </script>
+</body>
+</html>

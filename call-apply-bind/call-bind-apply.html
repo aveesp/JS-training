@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<div id="msg2"></div>
+		<div id="msg3"></div>
+		<script>
+			//call
+			var obj = {num: 2};
+			var obj2 = {num: 5};
+
+			var addToThis = function(a, b, c){
+				return this.num + a + b + c;
+			}
+			//call will refer to object + and argument
+			addToThis.call(obj, 1,2,3);
+
+			var arr = [1, 2, 3]
+
+			//Apply will refer to object + argument as array
+			addToThis.apply(obj, arr);
+
+			//bind gives function back that i can use it later time 
+			addToThis.bind(obj2);
+			bound(1,2,3);
+		</script>
+	</body>
+</html>

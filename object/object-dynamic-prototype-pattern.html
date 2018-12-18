@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Object creation - Constructor Pattern Program</title>
+	</head>
+	<body>
+		<script>
+			//Dynamic Prototype pattern - Object creation.
+			var dynamicPrototype = function(name, age, state){
+				this.name = name;
+				this.age = age;
+				this.state = state;
+				
+				if(typeof(this.printPerson !== 'function')){
+					dynamicPrototype.prototype.printPerson = function(){  
+						console.log(this.name + ", " + this.age + ", " + this.state);
+					};
+				}
+			}
+			
+			var person1 = new dynamicPrototype('John', 30, 'MH');
+			var person2 = new dynamicPrototype('Kim', 23, 'DL');
+			
+			person1.printPerson();
+			person2.printPerson();
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Car = function(){};
+
+         Car.prototype = {
+             print(){
+                 return `I am a car`;
+             }
+         }
+
+         const ToyCar = function(){};
+
+         ToyCar.prototype = Object.create(Car.prototype);
+
+         ToyCar.prototype.print = function(){
+             return 'I am a Toy Car';
+         }
+
+         const ToyTransformer = function(){};
+
+         ToyTransformer.prototype = Object.create(ToyCar.prototype);
+
+         ToyTransformer.prototype.print = function(){
+            return 'I am a Toy Transformer';
+
+         }
+
+         ///create object
+
+         const toyota = new Car();
+         const legoCar = new ToyCar();
+         const OptimusPrim = new ToyTransformer();
+
+         console.log(toyota.print());
+         console.log(legoCar.print());
+         console.log(OptimusPrim.print());
+
+         console.dir(OptimusPrim)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<div id="msg2"></div>
+		<div id="msg3"></div>
+		<script>
+		
+			//old way
+			let calc = function(no1, no2, calcType){
+				
+				if(calcType == 'add'){
+					return no1 + no2;
+				}
+				else if(calcType == 'multiply'){
+					return no1 * no2;
+				}
+				else if(calcType == 'comment'){
+					console.log(`here are your two numbers back ${no1} , ${no2}`);
+				}
+			}
+			
+			
+			console.log(calc(6,8, 'add'));
+			console.log(calc(6,8, 'multiply'));
+			console.log(calc(6,8, 'comment'));
+			
+			let add = function(a, b){
+				return a + b;
+			}
+			
+			let multiply = function(a, b){
+				return a * b;
+			}
+			
+			let comment = function(a,b){
+				console.log(`here are your two numbers back ${a} , ${b}`);
+			}
+			
+			//modified version
+			let cal = function(no1, no2, callback){
+				if(typeof(callback == 'function')){
+					return callback(no1, no2);
+				}
+				else{
+					alert('Provide Correct Action');
+				}
+			}
+			
+			console.log(cal(3,5, function(a,b){return a + b}));
+			console.log(cal(3,5, function(a, b){return b - a}));
+		</script>
+	</body>
+</html>

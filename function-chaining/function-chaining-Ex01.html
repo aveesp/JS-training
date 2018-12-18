@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>First Program</title>
+	</head>
+	<body>
+		<div id="msg1"></div>
+		<script>
+			//constructor (object) function
+			var obj = function(){
+				this.i = 0;
+				
+				this.add = function(i){
+					this.i += i;
+					return this;
+				}
+				
+				this.subs = function(i){
+					this.i -= i;
+					return this;
+				}
+				
+				this.print = function(){
+					console.log(this.i);
+				}
+			}
+			
+			var x = new obj();
+			
+			x.add(8).subs(1).print();
+			
+		</script>
+	</body>
+</html>

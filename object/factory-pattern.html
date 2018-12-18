@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factory Pattern Example</title>
+    </head>
+    <body>
+        <script>
+            var PeopleFactory = function(name, age, address){
+                var temp = {};
+                temp.name = name;
+                temp.age = age;
+                temp.address = address;
+
+                temp.printPerson = function(){
+                    var div = document.createElement("div");
+                    var t = document.createTextNode(this.name + ", " + this.age + ", " + this.address);
+                    div.appendChild(t);
+                    document.body.appendChild(div);
+                }
+
+                return temp;
+            }
+            var person1 = PeopleFactory('avees', 29 , 'katraj, pune');
+            var person2 = PeopleFactory('abdullah', 26, 'Kondhwa, pune');
+            person1.printPerson();
+            person2.printPerson();
+        </script>
+    </body>
+</html>
